@@ -1,20 +1,20 @@
 import java.util.*;
 import java.io.*;
 public class GraphNode implements Serializable{
-	private boolean hasNorth;
-	private GraphNode north;
-	private int northWeight;
-	private boolean hasSouth;
-	private GraphNode south;
-	private int southWeight;
-	private boolean hasEast;
-	private GraphNode east;
-	private int eastWeight;
-	private boolean hasWest;
-	private GraphNode west;
-	private int westWeight;
-	private boolean isGoalNode;
-	private String id;
+	public boolean hasNorth;
+	public GraphNode north;
+	public int northWeight;
+	public boolean hasSouth;
+	public GraphNode south;
+	public int southWeight;
+	public boolean hasEast;
+	public GraphNode east;
+	public int eastWeight;
+	public boolean hasWest;
+	public GraphNode west;
+	public int westWeight;
+	public boolean isGoalNode;
+	public String id;
 	
 	public int priority;
 	public GraphNode previousNode;

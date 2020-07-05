@@ -1,0 +1,54 @@
+		GraphNode A = new GraphNode("A4513978-0d6e-4d7d-985f-bd627dcd2fcc", false);
+		GraphNode B = new GraphNode("B0513978-0d6e-4d7d-985f-bd627dcd2fcc", false);
+		GraphNode C = new GraphNode("C2513978-0d6e-4d7d-985f-bd627dcd2fcc", false);
+		GraphNode D = new GraphNode("Dh513978-0d6e-4d7d-985f-bd627dcd2fcc", false);
+		GraphNode E = new GraphNode("E4513978-0d6e-4d7d-985f-bd627dcd2fcc", false);
+		GraphNode F = new GraphNode("F4513978-0d6e-4d7d-985f-bd627dcd2fcc", true);
+		
+		A.priority = 0;
+		A.hasEast = true;
+		A.east = B;
+		A.eastWeight = 6;
+		
+		B.priority = 1000000000;
+		B.hasEast = true;
+		B.east = D;
+		B.eastWeight = 4;
+		B.hasSouth = true;
+		B.south = C;
+		B.southWeight = 7;
+		
+		C.priority = 1000000000;
+		C.hasEast = true;
+		C.east = E;
+		C.eastWeight = 3;
+		C.hasNorth = true;
+		C.north = B;
+		C.northWeight = 5;
+		C.hasWest = true;
+		C.west = F;
+		C.westWeight = 3;
+		
+		D.priority = 1000000000;
+		D.hasWest = true;
+		D.west = B;
+		D.westWeight = 2;
+		D.hasSouth = true;
+		D.south = E;
+		D.southWeight = 8;
+		
+		E.priority = 1000000000;
+		E.hasWest = true;
+		E.west = C;
+		E.eastWeight = 10;
+		E.hasNorth = true;
+		E.north = D;
+		E.northWeight = 11;
+		
+		F.priority = 1000000000;
+	
+		
+		MinPriorityQueue PQ = new MinPriorityQueue();
+		GraphNode home = A;
+		PQ.insert(A);
+		System.out.println("Start= " + PQ);
