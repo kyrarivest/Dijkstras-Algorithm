@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 
 public class FindMinPath{
 	public static void main(String[] args) {
-		GraphWrapper gw = new GraphWrapper(true);
+		GraphWrapper gw = new GraphWrapper();
 		MinPriorityQueue PQ = new MinPriorityQueue();
 		GraphNode home = gw.getHome();
 		PQ.insert(home);
